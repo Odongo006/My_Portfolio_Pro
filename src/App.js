@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
+  const personalDetails = {
+    name: "Henry Omondi",
+    location: "Nairobi, Kenya",
+    email: "henryomondi66612@gmail.com",
+    availability: "Open for work",
+    brand:
+      "Henry Omondi is not only skilled in various technologies but has also received positive feedback for effective communication and collaboration in remote environments, making him a dedicated and adaptable software developer committed to continuous growth.",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <AnimatedRoutes personalDetails={personalDetails} />
+    </>
   );
 }
 
