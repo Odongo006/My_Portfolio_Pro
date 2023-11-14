@@ -30,20 +30,9 @@
     "bgcolor": "#f377e7",
     "id": "3"
   },
-
-  {
-    "title": "Tasty Bites",
-    "image": "./projectImages/tasty-bites.gif",
-    "description": "Tasty Bites: Organize, Create, and Share Recipes with Ease! Save, track, and manage your recipes, ingredients, and inventory effortlessly. Generate shopping lists based on your recipe needs. Share your favorite recipes with the world by making them public. Cook with confidence and never miss a beat with Tasty Bites! 🍴📝",
-    "technologies": "Ruby on Rails | Postgresql | HTML & CSS",
-    "github": "https://github.com/Enning94/RoR-Recipe-App-group-project.git",
-    "deployed": "https://tasty-bites-4qqm.onrender.com/",
-    "bgcolor": "#f37737",
-    "id": "4"
-  },
   {
     "title": "Math Magicians",
-    "image": "./projectImages/math-magic.gif",
+    "image": "./projectImages/Math Magic.. (1).gif",
     "technologies": "React| JavaScript | CSS",
     "description": " In this react project I created a full website for the Math magicians app, consisting of several pages and using the components I have already created. By adding a Home page, Calculator page and Quotes page.🧮🌐📚💻",
      "github": "https://github.com/Odongo006/math-magician-app.git",
