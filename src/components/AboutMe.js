@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import aboutMeImg from "../images/1.png";
+import aboutMeImg from "../images/portfolioImg.jpg";
 import aboutMeImgMobile from "../images/1.png";
 import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
 import { useInView } from "react-intersection-observer";
 
 const AboutMe = ({ name, email, location, availability, brand, CTA }) => {
-  const [ref, inView] = useInView({
+  const [ref, inView] = useInView({ 
     threshold: 0.2,
     triggerOnce: true,
   });
