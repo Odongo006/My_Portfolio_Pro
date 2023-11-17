@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import aboutMeImg from "../images/portfolioImg.jpg";
+import aboutMeImg from "../images/webpic.jpg";
 import aboutMeImgMobile from "../images/1.png";
 import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
