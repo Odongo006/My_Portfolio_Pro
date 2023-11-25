@@ -11,7 +11,7 @@ const Feedback = () => {
         title={feedback.title}
         image={feedback.image}
         company_name={feedback.company_name}
-        name={feedback.name}
+        author={feedback.author}
         description={feedback.description}
         github={feedback.github}
         bgcolor={feedback.bgcolor}
@@ -21,7 +21,7 @@ const Feedback = () => {
 
   return (
     <section className="feedback">
-      <PageHeader title="Feedback" description="What others say about me" />
+      <PageHeader title="Blog" description="What others say about me" />
       <div className="row">
         <FeedbackList />
       </div>

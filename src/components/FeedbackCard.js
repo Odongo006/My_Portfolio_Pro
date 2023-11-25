@@ -5,11 +5,8 @@ import closeModal from "../images/close.svg";
 
 const FeedbackCard = ({
   id,
-  name,
-  github,
+  author,
   title,
-  company_name,
-  image,
   description,
   bgcolor,
   textcolor,
@@ -25,6 +22,18 @@ const FeedbackCard = ({
     visible: { opacity: 1, y: 0 },
   };
 
+  const boxStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridTemplateRows: 'repeat(2, 1fr)',
+    gap: 'var(--spacing)*3', // Adjust the gap as needed
+    overflow: 'hidden',
+    marginTop: 'calc(var(--spacing) * 0.5)',
+    paddingBottom: 'var(--spacing)',
+    textAlign: 'center',
+  };
+  
+
   Modal.setAppElement("#root");
 
   return (
@@ -35,27 +44,25 @@ const FeedbackCard = ({
       animate="visible"
       transition={{ duration: 0.5, delay: id * 0.1 }}
     >
-      <div className="feedbackCardInner">
-        {/* <div className="imageContainers">
-          <img src={image} alt="Laptop displaying the application" />
-        </div> */}
-        <div className="contentContainer" style={{ backgroundColor: bgcolor }}>
-          <div className="bubble" style={{ color: textcolor }}>
-            <h3 className="name">{name}</h3>
-            <p className="github">
-              <a href={github} target="_blank" rel="noopener noreferrer">
-                GitHub Profile
-              </a>
-            </p>
-            <h4 className="title">{title}</h4>
-            <p className="company">
-              <span class="companyTitle">Works at: </span>
-              {company_name}
-            </p>
-            <p className="description">{description}</p>
-          </div>
-        </div>
+<div className="gridContainer" style={boxStyle}>
+  <div className="feedbackCardInner" style={{ display: 'flex', flexDirection: 'column' }}>
+    {/* <div className="imageContainers">
+      <img src={image} alt="Laptop displaying the application" />
+    </div> */}
+    <div className="contentContainer" style={{ backgroundColor: bgcolor }}>
+      <div className="bubble" style={{ color: textcolor, display: 'flex', flexDirection: 'column' }}>
+        <h4 className="title">{title}</h4>
+        <p className="description">{description}</p>
+        <h3 className="author" style={{ marginTop: 'auto' }}>
+          Author: {author}
+        </h3>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
       <Modal
         isOpen={showModal}
         onRequestClose={handleCloseModal}
@@ -84,15 +91,8 @@ const FeedbackCard = ({
           alt="Close"
         ></img>
         <h3 className="modalTitle">{title}</h3>
+        <h3 className="author">{author}</h3>
         <p className="projectDescription">{description}</p>
-        <a
-          href={github}
-          className="btn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub Profile
-        </a>
       </Modal>
     </motion.div>
   );
