@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import aboutMeImg from "../images/webpic.jpg";
-import aboutMeImgMobile from "../images/1.png";
+import aboutMeImg from "../images/profileAboutMe.jpg";
+import aboutMeImgMobile from "../images/profileAboutMe.jpg";
 import { motion } from "framer-motion";
 import SocialIcons from "../components/SocialIcons";
 import { useInView } from "react-intersection-observer";
 
 const AboutMe = ({ name, email, location, availability, brand, CTA }) => {
-  const [ref, inView] = useInView({ 
+  const [ref, inView] = useInView({
     threshold: 0.2,
     triggerOnce: true,
   });
@@ -23,7 +23,7 @@ const AboutMe = ({ name, email, location, availability, brand, CTA }) => {
     setDownloading(true);
     const link = document.createElement("a");
     link.href =
-      "https://drive.google.com/file/d/1h1lXuU9F5nh3Cm95lUYXkpj9CCLkKo7r/view?usp=sharing";
+      "https://drive.google.com/file/d/1XTAwnk3XhgQQwkOIGOnGwdw87Deq6eTj/view?usp=sharing";
     link.onload = () => {
       link.remove();
       setDownloading(false);
@@ -71,8 +71,7 @@ const AboutMe = ({ name, email, location, availability, brand, CTA }) => {
               Hello there! Nice to meet you
             </h4>
             <h5 className={`visible1 ${showH5 ? "active" : ""}`}>
-              I'm a Full-stack Web Developer with a passion for creating
-              exceptional digital products!
+            I'm a Tech Strategist building SaaS & digital solutions that help businesses scale and maximize growth with technology.
             </h5>
             <div className="contentDescription">
               <span
@@ -83,11 +82,24 @@ const AboutMe = ({ name, email, location, availability, brand, CTA }) => {
               </span>{" "}
               <p className={`visible2 ${showP ? "active" : ""}`}>{brand}</p>
               <p className={`visible2 ${showP ? "active" : ""}`}>
-                I love to create amazing web experiences for users!
-              </p>
+                I don’t just build software—I craft digital experiences that drive business success. 🚀</p>
               <p className={`visible2 ${showP ? "active" : ""}`}>{CTA}</p>
+              <div className="buttonContainer">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="btn downloadCV"
+                onClick={handleDownload}
+                disabled={downloading}
+              >
+                {downloading ? "Downloading..." : "Work With Me"}
+              </motion.button>{" "}
+              <SocialIcons />
             </div>
+              </div>
             <div className="infoContainer">
+
+              
               <div className="row">
                 <div className="col-12 col-md-6 info">
                   <span>Name:</span>
@@ -110,18 +122,6 @@ const AboutMe = ({ name, email, location, availability, brand, CTA }) => {
                   <p>{availability}</p>
                 </div>
               </div>
-            </div>
-            <div className="buttonContainer">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className="btn downloadCV"
-                onClick={handleDownload}
-                disabled={downloading}
-              >
-                {downloading ? "Downloading..." : "Resume"}
-              </motion.button>{" "}
-              <SocialIcons />
             </div>
           </div>
         </motion.div>

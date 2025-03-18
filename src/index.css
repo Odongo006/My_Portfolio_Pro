@@ -256,13 +256,13 @@ body {
     }
 
     .visible1, .visible2 {
-      display: none;
+      display: block;
     }
   }
   
   .visible1.active, .visible2.active {
     display: block;
-    animation: fadeOut 30s forwards;
+    animation: fadeOut 4s forwards;
   }
   
   @keyframes fadeOut {

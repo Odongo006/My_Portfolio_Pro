@@ -48,9 +48,9 @@ const Landing = ({ name }) => {
             className="description"
             options={{
               strings: [
-                "I'm a <span class='blue'>Full-stack developer</span>",
-                "I'm an <span class='blue'>Effective Collaborator</span>",
-                "My adaptability extends to my ability to work seamlessly with diverse teams and stakeholders, fostering productive collaboration and communication.",
+                "I'm a <span class='blue'>Tech Strategist</span>",
+                "I build <span class='blue'>SaaS and Digital Solutions</span>",
+                "Helping businesses scale with tech",
               ],
               autoStart: true,
               loop: true,
@@ -69,7 +69,7 @@ const Landing = ({ name }) => {
           transition={{ duration: 2, ease: "easeInOut" }}
           style={styles.landingImage}
           src={landingImage}
-          alt="Henry Omondi"
+          alt="Henry Odongo"
         />
       </div>
       <SocialIcons />

@@ -3,12 +3,13 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 
 function App() {
   const personalDetails = {
-    name: "Henry Omondi",
+    name: "Henry Odongo",
     location: "Nairobi, Kenya",
-    email: "henryomondi66612@gmail.com",
+    email: "henryomondi6612@gmail.com",
     availability: "Open for work",
     brand:
-      "Henry Omondi is not only skilled in various technologies but has also received positive feedback for effective communication and collaboration in remote environments, making him a dedicated and adaptable software developer committed to continuous growth.",
+      "I help ambitious business owners and startup founders break free from inefficiencies, confusion, and lost opportunities by using technology to drive growth. With the right digital solutions, you can scale your business effortlessly, attract more customers, and maximize profits—without the frustration of trial and error. If you're tired of struggling and ready to take control, let’s build something extraordinary together.",
+    CTA: "You're just one smart decision away from transforming your business. Let’s create a tech-driven strategy that unlocks your full potential—Book a free consultation now!",
   };
 
   return (
