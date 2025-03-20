@@ -1,5 +1,5 @@
 import NavLinks from "./NavLinks";
-import logo from "../images/logo.webp";
+import logo from "../images/logoo124.png";
 
 const Header = () => {
   return (
